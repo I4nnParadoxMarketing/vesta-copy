@@ -20,7 +20,7 @@
     "test": "pnpm run test:int && pnpm run test:e2e",
     "test:e2e": "cross-env NODE_OPTIONS=\"--no-deprecation --import=tsx/esm\" playwright test --config=playwright.config.ts",
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts",
-    "ci": "payload migrate && npm run build"
+    "ci": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 payload migrate && npm run build"
   },
   "dependencies": {
     "@payloadcms/admin-bar": "4.0.0-beta.10",
