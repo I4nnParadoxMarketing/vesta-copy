@@ -78,6 +78,9 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URL || '',
       max: 1,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     },
     push: false,
   }),
