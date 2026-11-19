@@ -1,0 +1,18 @@
+---
+description: Ship changes via feature branches and pull requests with Vercel previews
+alwaysApply: true
+---
+
+# Branch, PR, and Vercel preview workflow
+
+When the user asks to commit, push, or ship work in this repository:
+
+1. Create a new branch from the latest `main` (e.g. `feat/short-description`). Never commit directly on `main`.
+2. Stage and commit only the changes for that task.
+3. Push the branch and open a pull request with `gh pr create`.
+4. After Vercel finishes deploying, add the preview URL to the PR description or a comment.
+5. Do not merge the PR unless the user explicitly asks.
+
+This rule does not authorize commits on its own. Follow the user's existing rule: commit only when they ask.
+
+Production is `main` on Vercel. Preview deployments are created for every pull request.
