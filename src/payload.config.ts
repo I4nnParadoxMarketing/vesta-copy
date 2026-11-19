@@ -79,7 +79,6 @@ export default buildConfig({
       connectionString: process.env.DATABASE_URL || '',
       max: 1,
     },
-    schemaName: 'payload',
     push: false,
   }),
   collections: [
